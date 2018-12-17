@@ -77,13 +77,13 @@ ul.mainnav{
 }
 .mainnav>li{
     float:left;
-    width: 25%;
+    width: 100%;
     list-style: none;
     border-right: 1px solid #d4d4d4;
 }
-.mainnav>li:last-child{
+/*.mainnav>li:last-child{
     border-right:none;
-}
+}*/
 .mainnav a,
 .mainnav a:visited{
     font-size: 2.25rem;
@@ -120,13 +120,8 @@ main{
     padding: 0 0 1rem 0;
 }
 .col-2{
-    width: 50%;
-    border-right: 1px solid #d4d4d4;
-    float: left;
+    width: 100%;
     padding: 1rem 2rem;
-}
-.col-2:last-child{
-    border:none;
 }
 footer{
     padding: 1rem 2rem;
@@ -143,6 +138,9 @@ footer{
         font-size: 100%;
         line-height: 1.3;
     }
+    .mainnav{
+        border-left: 1px solid #d4d4d4;
+    }
 }
 @media only screen and (min-width: 38em) {
     /* medium */
@@ -150,6 +148,26 @@ footer{
         font-size: 110%;
         line-height: 1.4;
     }
+    ul.mainnav{
+        border-left: 1px solid #d4d4d4;
+        border-bottom: none;
+    }
+    .mainnav>li {
+        float:left;
+        width: 50%;
+        list-style: none;
+        border-right: 1px solid #d4d4d4;
+        border-bottom: 1px solid #d4d4d4;
+    }
+    .col-2{
+        width: 50%;
+        border-right: 1px solid #d4d4d4;
+        float: left;
+    }
+    .col-2:last-child{
+     border:none;
+    }
+    
 }
 @media only screen and (min-width: 60em) {
     /* large */
@@ -157,11 +175,46 @@ footer{
         font-size: 120%;
         line-height: 1.5;
     }
+    ul.mainnav{
+        border-left: none;
+        border-bottom: none;
+    }
+    .mainnav>li {
+        float:left;
+        width: 25%;
+        list-style: none;
+        border-right: 1px solid #d4d4d4;
+    }
+    .mainnav>li:last-child{
+        border-right:none;
+    }
 }
 @media only screen and (min-width: 90em) {
     /* extra large */
     html {
         font-size: 130%;
+    }
+    nav{
+        width: 20%;
+        float: left;
+        border-right: 1px solid #d4d4d4;
+    }
+    ul.mainnav{
+        border-left: none;
+        border-bottom: none;
+    }
+    .mainnav>li {
+        width: 100%;
+        list-style: none;
+        border-bottom: 1px solid #d4d4d4;
+    }
+    .col-2{
+        width: 40%;
+        border-right: 1px solid #d4d4d4;
+        float: left;
+    }
+    .col-2:last-child{
+         border:none;
     }
 
 }
